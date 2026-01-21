@@ -1,0 +1,75 @@
+.nav-bar {
+width: 100%;
+background: linear-gradient(180deg, #1a0b2e, #12071f);
+border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-bar-container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 20px 30px;
+
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+/* Logo */
+.nav-logo {
+font-size: 32px;
+font-weight: 800;
+color: #ffffff;
+text-decoration: none;
+letter-spacing: 0.5px;
+}
+
+.nav-logo span {
+background: linear-gradient(90deg, #ff3cac, #784ba0);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+/* Text এর ভিতরে gradient দেখাতে হলে
+ -webkit-background-clip: text
+ এবং -webkit-text-fill-color: transparent ব্যবহার করতেই হবে */
+
+ /* Menu */
+.nav-menu .nav-items {
+list-style: none;
+display: flex;
+gap: 40px;
+}
+
+.nav-menu .nav-items li a {
+text-decoration: none;
+color: #cccccc;
+font-size: 15px;
+display: inline-block;   
+padding: 8px 14px;  
+transition: all 0.3s ease;
+border-radius: 6px;
+}
+
+
+.nav-menu .nav-items li a:hover {
+  background-color: navy;
+}
+/* Button */
+.nav-btn .btn-subscribe {
+padding: 10px 22px;
+background: linear-gradient(90deg, #ff3cac, #784ba0, #2b86c5);
+color: #ffffff;
+text-decoration: none;
+border-radius: 25px;
+font-size: 14px;
+font-weight: 500;
+transition: all 0.3s ease;
+}
+.nav-btn .btn-subscribe:hover{
+    color: navy;
+    font-size: medium;
+    
+}
+
+/* NAV-BAR CSS FINISHED */
