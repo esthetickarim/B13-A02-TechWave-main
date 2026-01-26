@@ -22,7 +22,6 @@ max-width: 1200px;
 margin: 0 auto;
 padding: 20px 30px;
 
-
 display: flex;
 align-items: center;
 justify-content: space-between;
@@ -79,10 +78,10 @@ font-size: 14px;
 font-weight: 500;
 transition: all 0.3s ease;
 }
+
 .nav-btn .btn-subscribe:hover{
     color: navy;
-    font-size: medium;
-    
+    font-size: medium;  
 }
 
 
@@ -96,170 +95,369 @@ transition: all 0.3s ease;
 }
 
 
-
 /* NAV-BAR CSS FINISHED */
 /* BOP-TiZS */
 
-.hero{
-    background: radial-gradient(circle at center, #2b0a3d, #120822);
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    min-height: 100vh;
-    box-shadow: inset 0 -120px 180px rgba(0,0,0,.4) ;
+/* HERO SECTION BACKGROUND */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
 }
-.hero-section{
-    width: 100%;
-    min-height: 100vh;
-    margin: 0 auto;
-    padding: 60px 20px;
-    position: relative;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    flex-wrap: wrap;
+
+.wave {
+  width: 100%;
+  opacity: 20%;
 }
-.hero-img {
+
+.hero-visual {
   position: relative;
-  width: 300px;
-  height: 300px;
-  margin: 0 auto 30px;
   
 }
 
-/* FOR BADGE-NEW */
+.hero-content {
+  position: absolute;
+  left: 50%;
+  bottom: 100px;   /* adjust THIS value only */
+  transform: translateX(-50%);
+  z-index: 3;
+  text-align: center;
+}
 
+
+
+/* SOUND-WAVE IMAGE FULL WIDTH NO NEEDED POSITION */
+.hero-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .circle-wrapper {
   position: relative;
-  width: 100%;
-  height: 100%;
 }
 
-.badge-new {
+/* CIRCLE WRAPPER CENTER HERO */
+.circle-wrapper {
   position: absolute;
-  top: 20px;
-  right: 25px;
-
-  background-color: #017f0e;
-  color: #000;
-
-  font-size: 15px;
-  font-weight: 600;
-  text-transform: uppercase;
-
-  padding: 6px 10px;
-  border-radius: 999px;
-
-  z-index: 3;
-  box-shadow: 0 4px 10px rgba(197, 34, 151, 0.4);
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-
-.round-img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  z-index: 1;
+/* CIRCLE IMAGE CENTER */
+.circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
 }
-
-.mic-img {
+/* MIC IMAGE CENTER */
+.mic {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 120px;
   transform: translate(-50%, -50%);
-  z-index: 2;
+  width: 80px;
+}
+.badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: #00ff84;
+  color: #000;
+  font-size: 16px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-weight: bold;
 }
 
 
-.hero-section-items{
-    width: 100%;
-    max-width: 720px;
-    padding: 40px 20px;
-    background: transparent;
-    align-self: center;
-    transform: translateY(0);
-    transition: transform 0.3s ease;
-    color: ffffff;
-}
-
-
-
-.hero-section-items h2{
-    font-size: 56px;
-    max-width: 680;
-    margin-bottom: 10px;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-
-.hero-section-items p{
-    font-size: 16px;
-    max-width: 680px;
-    margin-bottom: o auto 32px;
-    font-weight: 400;
-    line-height: 20px;
-    color: #ffffff;
-    text-align: center;
-    margin-bottom: 15px;
-}
-/* BUTTON CONTAINER CSS */
-.hero-btns{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-/* COMMON BUTTON CSS */
-.hero-btns btn{
-    height: 52px;
-    min-width: 200px;
-    padding: 0 32px;
-    display: inline-flex;
-    align-items: center;
-    transition: transform 0.25s ease;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 30%;
-}
-
-/* Primary button */
-.hero-btns .btn-primary {
-  background-color: #6c5cff;
-  color: #ffffff;
-  box-shadow: 0 10px 30px rgba(108, 92, 255, 0.35);
-}
-
-/* Secondary button */
-.hero-btns .btn-secondary{
-  background-color: transparent;
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.45);
-}
-
-
-
-/* Hover (safe, no reset) */
-.hero-btns .btn:hover {
-  transform: translateY(-2px);
-}
-
-/* Secondary / Outline Button */
-.btn-secondary {
-  padding: 10px 22px;
-  background: transparent;
-  color: #ffffff;
-  text-decoration: none;
+.hero-buttons button {
+  margin: 10px;
+  padding: 12px 20px;
   border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+/* HERO-CONTENT */
+.hero-content h1 {
+  font-size: 56px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.hero-content p {
+  font-size: 16px;
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+.hero-content p {
+  font-size: 16px;
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  border-radius: 999px;
   font-size: 14px;
   font-weight: 500;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  text-decoration: none;
   transition: all 0.3s ease;
+}
+/* GRADIENT btn */
+.btn-primary {
+  background: linear-gradient(90deg, #ff4ecd, #ffc857);
+  color: #000;
+}
+/* Transparent btn */
+.btn-outline {
+  color: #6dffb5;
+  border: 1px solid rgba(109, 255, 181, 0.5);
+  background: transparent;
+}
+/* Hover */
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-outline:hover {
+  background: rgba(109, 255, 181, 0.1);
+}
+
+
+/* Finised hero-section */
+
+/* CSS for About-Section */
+
+.about-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* It is global CSS */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.about-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  text-align: center;
+}
+
+/* CSS FOR <hr/> */
+hr {
+  border: rgba(ffffff, ffffff, ffffff 1);
+  opacity: 0.1;
+  height: 2px;
+  width: 1100px;
+  margin: 40px auto;
+}
+
+
+/* Stats css */
+.about-stats {
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+/* flex:1 means - all boxes width equal */
+.stat-item {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+  /* background-color: #f5f5f5; */
+  border-radius: 10px;
+}
+
+/* Style the number */
+.stat-number {
+  display: block;
+  font-size: 26px;
+  font-weight: 700;
+  color: #00ff88;
+}
+
+/* Style the level */
+.stat-label {
+  font-size: 14px;
+  color: #666;
+}
+
+
+/* Finished About Section CSS */
+
+/* Started Why Choose TechWave */
+
+
+/* =========================
+   Background Wrapper
+========================= */
+.features-bg {
+  max-width: 1600px;
+  margin: auto;
+  padding: 80px 20px;
+  background: linear-gradient(145deg, #3e0832, #200868);
+}
+
+/* =========================
+   Container
+========================= */
+.features {
+  max-width: 900px;
+  margin: auto;
+}
+
+.features h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 36px;
+  color: #ffffff;
+}
+
+/* =========================
+   Grid Layout
+========================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* =========================
+   Card Base (Unified)
+========================= */
+.card {
+  background: linear-gradient(145deg, #2b0a44, #1f0833);
+  padding: 30px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  min-height: 220px; /* 🔑 Ensures all cards look equal */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* =========================
+   Card Content
+========================= */
+.card img {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 16px;
+}
+
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #38bdf8;
+}
+
+.card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #e5e7eb;
+}
+
+/* =========================
+   Equal Grid Placement
+   (No visual differences)
+========================= */
+.premium,
+.mobile,
+.global,
+.exclusive,
+.resources {
+  grid-column: auto;
+  grid-row: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 24px;
+}
+.premium {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+.mobile {
+  grid-column: 2 / span 2;
+  grid-row: 1;
+}
+.global {
+  grid-column: 2 / span 2;
+  grid-row: 2;
+
+}
+.exclusive {
+  grid-column: 1 / span 2;
+  grid-row: 3;
+}
+.resources {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.card {
+  background: linear-gradient(145deg, #2b0a44, #1f0833);
+  padding: 30px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.08);
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: .3s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(0,0,0,.4);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .premium,
+  .mobile,
+  .global,
+  .exclusive,
+  .resources {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
