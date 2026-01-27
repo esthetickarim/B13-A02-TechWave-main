@@ -690,7 +690,7 @@ h2 {
 }
 
 .logo span {
-    color: #ff4fd8;
+    color: #03552b;
 }
 
 /* ===== ICONS ===== */
@@ -717,4 +717,258 @@ h2 {
 .footer p {
     font-size: 13px;
     color: #cbbce6;
+}
+
+
+/* Mobile responsive for small device */
+
+
+
+@media (max-width: 768px) {
+
+  /* COMMON */
+  section {
+    padding: 60px 5%;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+
+  /* NAV BAR */
+  .nav-bar-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .nav-menu .nav-items {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 80px 5%;
+  }
+
+  .hero-circle {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+  }
+
+  .mic-img {
+    width: 75px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .hero-content h2 {
+    font-size: 36px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  /* ABOUT */
+  .container {
+    padding: 50px 30px;
+    margin: 0 auto;
+  }
+
+  hr {
+    width: 100%;
+  }
+
+  .about-stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .stat-item {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* FEATURES */
+  .features-bg {
+    padding: 50px 30px;
+    margin: 0 auto;
+  }
+
+  /* FEATURED EPISODES */
+  .episode-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .episode-card {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  /* HOST */
+  .host-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    gap: 20px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 80px 5%;
+    text-align: center;
+  }
+
+}
+
+/* For Tablet devices */
+
+@media (max-width: 1024px) and (min-width: 769px) {
+
+  /* COMMON */
+  section {
+    padding: 80px 6%;
+  }
+
+  h2 {
+    font-size: 30px;
+    margin-bottom: 35px;
+  }
+
+  /* NAV BAR */
+  .nav-bar-container {
+    gap: 20px;
+  }
+
+  .nav-menu .nav-items {
+    gap: 20px;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 120px 6%;
+  }
+
+  .hero-circle {
+    width: 260px;
+    height: 260px;
+  }
+
+  .mic-img {
+    width: 90px;
+  }
+
+  .hero-content h2 {
+    font-size: 44px;
+  }
+
+  .hero-buttons {
+    gap: 20px;
+  }
+
+  /* ABOUT */
+  .container {
+    padding: 70px 50px;
+    margin: 0 auto;
+  }
+
+  .about-stats {
+    gap: 25px;
+  }
+
+  .stat-item {
+    width: 48%;
+    max-width: none;
+  }
+
+  /* FEATURES */
+  .features-bg {
+    padding: 70px 50px;
+  }
+
+  /* FEATURED EPISODES */
+  .episode-row {
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+  }
+
+  .episode-card {
+    width: 48%;
+    max-width: 420px;
+  }
+
+  /* HOST */
+  .host-box {
+    gap: 30px;
+    padding: 40px;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 100px 6%;
+  }
+
+}
+/* ----------
+for center ---------*/
+@media (max-width: 1024px) and (min-width: 769px) {
+
+  /* Center main wrappers */
+  .container,
+  .features-bg,
+  .episode-row,
+  .hero-content {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* Center flex layouts */
+  .nav-bar-container,
+  .about-stats,
+  .episode-row,
+  .host-box {
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Center cards */
+  .stat-item,
+  .episode-card {
+    margin: 0 auto;
+  }
+
+  /* Limit width so it stays centered nicely */
+  .container,
+  .features-bg {
+    max-width: 900px;
+  }
+
+  .hero-content {
+    max-width: 720px;
+  }
+
+  .episode-row {
+    max-width: 900px;
+  }
+
 }
