@@ -1,19 +1,27 @@
 /* Basic CSS Reset */
+/* ===== RESET ===== */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html, body {
-  width: 100%;
-  overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
 }
 
-
-body{
-    font-family: arial, sans-serif;
-    background-color: #120822;
+body {
+    background: radial-gradient(circle at top, #2b0a3d, #120822);
     color: #ffffff;
+    line-height: 1.6;
+}
+
+/* ===== COMMON ===== */
+section {
+    padding: 80px 8%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
 }
 /* NAV-BAR CSS IS STARTED */
 .nav-bar {
@@ -104,151 +112,173 @@ transition: all 0.3s ease;
 /* BOP-TiZS */
 
 /* HERO SECTION BACKGROUND */
+/* =========================
+   HERO SECTION
+========================= */
+
 .hero {
-  min-height: 100vh;
+  background: radial-gradient(
+    circle at center,
+    #2b0a3d 0%,
+    #14081f 60%,
+    #0b0414 100%
+  );
+  padding: 120px 0;
+  overflow: hidden;
+  position: relative;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+/* =========================
+   HERO CONTAINER
+========================= */
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  color: #fff;
   text-align: center;
 }
 
-.wave {
+/* =========================
+   HERO BACKGROUND VISUAL
+========================= */
+
+.hero-bg {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.hero-circle {
+  position: relative;
+  width: 260px;
+  height: 260px;
+}
+
+/* =========================
+   CIRCLE IMAGE
+========================= */
+
+.circle-img {
   width: 100%;
-  opacity: 20%;
+  height: 100%;
+  object-fit: contain;
 }
 
-.hero-content-wrapper{
-  position: relative;
-  
-  
-}
+/* =========================
+   MICROPHONE IMAGE
+========================= */
 
-.hero-content {
-  position: absolute;
-  left: 50%;
-  bottom: 100px;   /* adjust THIS value only */
-  transform: translateX(-50%);
-  z-index: 3;
-  text-align: center;
-}
-
-
-
-/* SOUND-WAVE IMAGE FULL WIDTH NO NEEDED POSITION */
-.hero-images {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.circle-wrapper {
-  position: relative;
-}
-
-/* CIRCLE WRAPPER CENTER HERO */
-.circle-wrapper {
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* CIRCLE IMAGE CENTER */
-.circle {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-}
-/* MIC IMAGE CENTER */
-.mic {
+.mic-img {
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 90px;
   transform: translate(-50%, -50%);
-  width: 80px;
 }
+
+/* =========================
+   BADGE
+========================= */
+
 .badge {
   position: absolute;
-  top: 18px;
-  right: 18px;
-  background: #00ff84;
-  color: #000;
-  font-size: 16px;
-  padding: 4px 8px;
-  border-radius: 12px;
-  font-weight: bold;
+  top: 17px;
+  right: 13px;
+
+  background: #22c55e;
+  color: #0b0414;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
 }
 
+/* =========================
+   HERO CONTENT
+========================= */
 
-.hero-buttons button {
-  margin: 10px;
-  padding: 12px 20px;
-  border-radius: 25px;
-  border: none;
-  cursor: pointer;
-}
-
-/* HERO-CONTENT */
-.hero-content h1 {
+.hero-content h2 {
   font-size: 56px;
   font-weight: 700;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .hero-content p {
   font-size: 16px;
-  opacity: 0.8;
-  margin-bottom: 30px;
+  max-width: 520px;
+  margin: 0 auto 32px;
+  opacity: 0.85;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 12px 22px;
-  border-radius: 999px;
+  gap: 8px;
+
+  padding: 12px 20px;
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
+  border-radius: 999px;
   transition: all 0.3s ease;
 }
-/* GRADIENT btn */
-.btn-primary {
-  background: linear-gradient(90deg, #ff4ecd, #ffc857);
-  color: #000;
+
+/* Gradient Button */
+
+.btn-gradient {
+  background: linear-gradient(90deg, #f97316, #ec4899);
+  color: #ffffff;
 }
-/* Transparent btn */
-.btn-outline {
-  color: #6dffb5;
-  border: 1px solid rgba(109, 255, 181, 0.5);
-  background: transparent;
-}
-/* Hover */
-.btn-primary:hover {
+
+.btn-gradient:hover {
   opacity: 0.9;
 }
 
-.btn-outline:hover {
-  background: rgba(109, 255, 181, 0.1);
+/* Outline Button */
+
+.btn-outline {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
 }
 
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
 
 /* Finised hero-section */
 
 /* CSS for About-Section */
 
 .about-section {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 70px;
+  padding-bottom: 20px;
+  
 }
 
 /* It is global CSS */
 .container {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
+  background: linear-gradient(145deg, #3e0832, #200868);
+  padding: 80px 80px;
 }
 
 
@@ -259,9 +289,9 @@ transition: all 0.3s ease;
   text-align: center;
 }
 .about-content p {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.6;
-  color: #555;
+  color: #bbb9b9;
   text-align: center;
 }
 
@@ -301,7 +331,7 @@ hr {
 
 /* Style the level */
 .stat-label {
-  font-size: 14px;
+  font-size: 18px;
   color: #666;
 }
 
@@ -315,17 +345,19 @@ hr {
    Background Wrapper
 ========================= */
 .features-bg {
-  max-width: 1600px;
-  margin: auto;
-  padding: 80px 20px;
+  width: 100%;
+  max-width: 1528px;
+  margin-left: auto;
+  margin-right: auto;
   background: linear-gradient(145deg, #3e0832, #200868);
+  padding: 80px 80px;
 }
 
 /* =========================
    Container
 ========================= */
 .features {
-  max-width: 900px;
+  max-width: 1100px;
   margin: auto;
 }
 
@@ -381,7 +413,7 @@ hr {
 }
 
 .card p {
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.6;
   color: #e5e7eb;
 }
@@ -462,4 +494,227 @@ hr {
   .grid {
     grid-template-columns: 1fr;
   }
+}
+
+
+/* FEATURED-SECTION CSS */
+
+/* ===== COMMON SECTION ===== */
+section {
+    padding: 80px 8%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+/* ===== FEATURED EPISODES ===== */
+/* ===== FEATURED EPISODES ===== */
+.episode-row {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.episode-card {
+    background: linear-gradient(180deg, #3a145e, #220c36);
+    width: 320px;
+    padding: 15px;
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0,0,0,.4);
+    transition: transform .3s ease;
+}
+
+.episode-card:hover {
+    transform: translateY(-8px);
+}
+
+/* ===== YOUTUBE THUMB ===== */
+.yt-thumb {
+    position: relative;
+    display: block;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.yt-thumb img {
+    width: 100%;
+    display: block;
+}
+
+.play-btn {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-btn i {
+    font-size: 46px;
+    color: #ff0000;
+    background: #fff;
+    padding: 12px 18px;
+    border-radius: 14px;
+    transition: transform .3s ease;
+}
+
+.yt-thumb:hover .play-btn i {
+    transform: scale(1.12);
+}
+
+.episode-card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.duration {
+    font-size: 14px;
+    color: #8affc1;
+    display: inline-flex;
+    gap: 6px;
+    align-items: center;
+}
+
+/* ===== HOST SECTION ===== */
+.host-box {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    background: linear-gradient(180deg, #2f0e4a, #1a082b);
+    padding: 35px;
+    border-radius: 22px;
+    box-shadow: 0 25px 50px rgba(0,0,0,.45);
+}
+
+.host-image {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #7f4cff;
+}
+
+.host-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.host-info h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.host-info p {
+    color: #d5cbe8;
+    margin-bottom: 20px;
+}
+
+/* ===== SOCIAL ICONS ===== */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    text-decoration: none;
+}
+
+.social-link i {
+    width: 38px;
+    height: 38px;
+    background: linear-gradient(145deg, #7b3fe4, #4b1fa0);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: transform .3s ease, background .3s ease;
+}
+
+.social-link i:hover {
+    transform: translateY(-4px);
+    background: linear-gradient(145deg, #ff4d4d, #cc0000);
+}
+.featured-p{
+  color: rgba(255, 255, 255, 0.3);
+  
+
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .host-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+/* Footer CSS */
+
+.footer {
+    padding: 100px 8%;
+    text-align: center;
+
+    /* BACKGROUND IMAGE */
+    background-image: url("../assets/footer-bg.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ===== FOOTER CONTENT ===== */
+.footer-content {
+    max-width: 900px;
+    margin: auto;
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.logo span {
+    color: #ff4fd8;
+}
+
+/* ===== ICONS ===== */
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    margin-bottom: 25px;
+}
+
+.footer-icons a {
+    color: #ffffff;
+    font-size: 18px;
+    opacity: 0.85;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-icons a:hover {
+    transform: translateY(-4px);
+    opacity: 1;
+}
+
+/* ===== COPYRIGHT ===== */
+.footer p {
+    font-size: 13px;
+    color: #cbbce6;
 }
